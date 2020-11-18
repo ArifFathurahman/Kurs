@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+       
+        .result-chat {
+            height: 250px;
+            width: 12.5%;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 140, 255);
+            border: 5px solid rgb(0, 0, 0);    
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="result-chat"></div>
+        <div>
+            <input type="text" class="input-chat">
+            <button class="btn-chat">Send</button>
+        </div>
+    </main>
+
+    <script>
+        let resultChat = document.querySelector(".result-chat");
+        const inputChat = document.querySelector(".input-chat");
+        const btnChat = document.querySelector(".btn-chat");
+
+        btnChat.addEventListener("click", function() {
+            resultChat.innerHTML = resultChat.innerHTML + "<br>" + "<br>" + "Arif :" + inputChat.value;
+            inputChat.value = "";
+        })
+    </script>
+</body>
+</html>
